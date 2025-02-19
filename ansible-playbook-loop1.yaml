@@ -1,0 +1,12 @@
+- hosts: all
+  tasks:
+    - name: Install multiple packages
+      yum:
+        name:
+          - git
+          - tree
+          - maven
+          - httpd  # (httpd equivalent in Debian)
+          - docker
+        state: present
+

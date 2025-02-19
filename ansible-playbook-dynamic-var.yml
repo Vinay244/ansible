@@ -1,0 +1,16 @@
+- hosts: all
+  tasks:
+    - name: task-1
+      yum:
+        name: "{{ pkg1 }}"
+        state: present
+
+    - name: task-2
+      yum:
+        name: "{{ pkg2 }}"
+        state: present
+
+    - name: task-3
+      yum:
+        name: "{{ pkg3 }}"
+        state: present

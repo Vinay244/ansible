@@ -1,0 +1,13 @@
+- hosts: all
+  tasks:
+    - name: Installing NumPy
+      pip:
+        name: NumPy
+        state: present
+
+- hosts: all
+  tasks:
+    - name: Installing Pandas
+      pip:
+        name: Pandas
+        state: present

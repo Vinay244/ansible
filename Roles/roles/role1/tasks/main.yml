@@ -1,0 +1,9 @@
+- name: Installing packages
+  yum:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - git
+    - tree
+    - docker
+    - maven

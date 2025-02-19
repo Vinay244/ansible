@@ -1,0 +1,27 @@
+- hosts: all
+  become: yes #For root privelege of worker nodes
+  tasks: 
+    - name: git-install
+      yum: 
+        pkg: git 
+        state: present
+
+    - name: Apache Server install
+      yum: 
+        name: httpd 
+        state: present
+
+    - name: Apache Server start
+      service: 
+        name: httpd 
+        state: started
+
+    - name: Tree install
+      yum: 
+        pkg: tree 
+        state: present
+
+    - name: creating user
+      user: 
+        name: Rohit.Sharma 
+        state: present

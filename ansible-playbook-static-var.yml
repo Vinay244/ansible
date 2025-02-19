@@ -1,0 +1,26 @@
+- hosts: all
+  vars:
+    a: git
+    b: tree
+    c: maven
+    d: Ganguly
+  tasks:
+    - name: Task-1
+      yum:
+        name: "{{ a }}"
+        state: present
+
+    - name: Task-2
+      yum:
+        pkg: "{{ b }}"
+        state: present
+
+    - name: Task-3
+      yum: 
+        pkg: "{{ c }}"
+        state: present
+
+    - name: Task-4
+      user:
+        name: "{{ d }}"
+        state: present 

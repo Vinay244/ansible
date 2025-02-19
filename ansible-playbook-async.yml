@@ -1,0 +1,13 @@
+- hosts: all
+  tasks:
+    - name: Install git
+      command: sleep 20
+      async: 10
+      poll: 5
+      ignore_errors: yes
+
+    - name: Install maven
+      yum:
+        pkg: maven
+        state: present
+

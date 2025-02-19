@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+    - name: task-1
+      shell: yum install docker -y
+
+    - name: task-2
+      command: yum install tree -y
+
+    - name: task-3
+      raw: yum install httpd -y

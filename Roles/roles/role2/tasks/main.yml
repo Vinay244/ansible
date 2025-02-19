@@ -1,0 +1,12 @@
+- name: Creating users  
+  become: yes
+  user:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - siva
+    - ayush
+    - hemanth
+    - raja
+
+          
